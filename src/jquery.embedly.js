@@ -130,8 +130,9 @@
         secure = window.location.protocol === 'https:'? true:false;
       }
 
-      var base = (secure ? 'https': 'http') +
-        '://api.embed.ly/' + (method === 'objectify' ? '2/' : '1/') + method;
+      var base = // (secure ? 'https': 'http') +
+        // '://api.embed.ly/' + (method === 'objectify' ? '2/' : '1/') + method;
+        'post/embed/';
 
       // Base Query;
       var query = none(options.query) ? {} : options.query;
